@@ -24,10 +24,14 @@ spring:
           uri: https://catalogue-production-de62.up.railway.app
           predicates:
             - Path=/ms-books-catalogue/**
+          filters:
+            - StripPrefix=1
         - id: ms-books-payment
           uri: https://orders-production-e195.up.railway.app
           predicates:
             - Path=/ms-books-payment/**
+          filters:
+            - StripPrefix=1
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
       globalcors:
