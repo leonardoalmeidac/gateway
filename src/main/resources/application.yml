@@ -18,7 +18,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false
+          enabled: true
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
       globalcors:
